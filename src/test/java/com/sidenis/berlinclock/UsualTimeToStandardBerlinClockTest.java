@@ -1,6 +1,5 @@
 package com.sidenis.berlinclock;
 
-import com.sidenis.berlinclock.TimeConverter;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,7 +10,7 @@ import org.junit.Test;
  */
 public class UsualTimeToStandardBerlinClockTest {
 
-    private TimeConverter timeConverter = new BerlinTimeConverter();
+    private final TimeConverter timeConverter = new BerlinTimeConverter();
 
     @Test
     public void testMidnight() {
