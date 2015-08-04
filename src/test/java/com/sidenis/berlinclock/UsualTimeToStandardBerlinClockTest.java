@@ -10,7 +10,7 @@ import org.junit.Test;
  */
 public class UsualTimeToStandardBerlinClockTest {
 
-    private final TimeConverter timeConverter = new BerlinTimeConverter();
+    private final TimeConverter timeConverter = new UsualTimeToStandardBerlinClock();
 
     @Test
     public void testMidnight() {
@@ -56,25 +56,29 @@ public class UsualTimeToStandardBerlinClockTest {
     @Test
     public void testIncorrectHours_1() {
         String actual = timeConverter.convertTime("25:10:10");
-        Assert.assertNull(actual);
+        String expected = "";
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testIncorrectMinutes() {
         String actual = timeConverter.convertTime("20:70:10");
-        Assert.assertNull(actual);
+        String expected = "";
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testIncorrectSeconds() {
         String actual = timeConverter.convertTime("20:10:90");
-        Assert.assertNull(actual);
+        String expected = "";
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testIncorrectHours_2() {
         String actual = timeConverter.convertTime("120:10:20");
-        Assert.assertNull(actual);
+        String expected = "";
+        Assert.assertEquals(expected, actual);
     }
 
 }
